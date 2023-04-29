@@ -46,25 +46,25 @@ int getFirstGoalNumber(){
     ofstream amountOfGoalsCookie("amountOfGoalsCookie.txt");
 
     do{
-    cout << "[++]How many goals do you have: ";
-    cin >> amountOfGoals;
-    if(amountOfGoals < 100000 && amountOfGoals > 0){
-        amountOfGoalsCookie << amountOfGoals << endl;
-        amountOfGoalsCookie.close();
-        hasItBeenRunnedCookie << "true" << endl;
-        return amountOfGoals;
-        break;
-    }
-    else if(amountOfGoals > 100000 || amountOfGoals < 0 || amountOfGoals == 0){
-        cout << "[««»»]That is not a valdi option, the amount must be bigger that 0 and smaller than 100000\n";
-        continue;
-    }
-    else{
-        cout << "[««~~»»]I don't even know how you manage to mess up so much a simple task\n";
-        cout << "[««~~»»]You don't deserve to use this program\n";
-        cout << "[««~~»»]ABORTING";
-        abort();
-    }
+        cout << "[++]How many goals do you have: ";
+        cin >> amountOfGoals;
+        if(amountOfGoals < 100000 && amountOfGoals > 0){
+            amountOfGoalsCookie << amountOfGoals << endl;
+            amountOfGoalsCookie.close();
+            hasItBeenRunnedCookie << "true" << endl;
+            return amountOfGoals;
+            break;
+        }
+        else if(amountOfGoals > 100000 || amountOfGoals < 0 || amountOfGoals == 0){
+            cout << "[««»»]That is not a valdi option, the amount must be bigger that 0 and smaller than 100000\n";
+            continue;
+        }
+        else{
+            cout << "[««~~»»]I don't even know how you manage to mess up so much a simple task\n";
+            cout << "[««~~»»]You don't deserve to use this program\n";
+            cout << "[««~~»»]ABORTING";
+            abort();
+        }
     }while(1 == 1);
 }
 
